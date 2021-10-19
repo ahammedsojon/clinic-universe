@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div className="about lg:container mx-auto p-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
                 <div>
                     <img className="max-w-full h-full object-cover" src="https://i.ibb.co/WFKVbp2/about.jpg" alt="" />
                 </div>
@@ -20,7 +20,7 @@ const About = () => {
                     <div>
                         <div className="flex">
                             <div className="text-red-700 text-4xl mr-8">
-                                <i class="fas fa-user-md"></i>
+                                <i className="fas fa-user-md"></i>
                             </div>
                             <div>
                                 <h1 className="text-2xl">Our Mission</h1>
@@ -31,7 +31,7 @@ const About = () => {
                         </div>
                         <div className="flex mt-8">
                             <div className="text-green-700 text-4xl mr-8">
-                                <i class="fas fa-stethoscope"></i>
+                                <i className="fas fa-stethoscope"></i>
                             </div>
                             <div>
                                 <h1 className="text-2xl">Our Vision</h1>

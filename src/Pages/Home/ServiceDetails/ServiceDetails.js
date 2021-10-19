@@ -9,11 +9,8 @@ const ServiceDetails = () => {
     const { serviceCategory, serviceId } = useParams();
     const [doctors, setDoctors] = useDoctors();
     const matchedDoctor = doctors.find(service => service.id === +serviceId);
-    console.log(doctors)
     const [services, setServices] = useServices();
-    console.log(services)
     const matchedService = services.find(service => service.id === +serviceId);
-    console.log(matchedService)
     const backgroundImg = {
         backgroundImage: `url(${matchedService?.img})`,
         minHeight: '70vh'
