@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .App {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
