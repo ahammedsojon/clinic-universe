@@ -11,9 +11,7 @@ import Register from './Pages/Login/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
-import Appointment from './Pages/Appointment/Appointment';
 import ScrollToTop from './Pages/ScrollToTop/ScrollToTop';
-import Doctors from './Pages/Home/Doctors/Doctors';
 import Schedule from './Pages/Schedule/Schedule';
 
 function App() {
