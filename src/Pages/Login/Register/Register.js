@@ -4,16 +4,10 @@ import { useState } from 'react/cjs/react.development';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
-    const { handleFirstNameChange, handleLastNameChange, handleImageChange, handleEmailChange, handlePasswordChange, registerNewUser, firstName, lastName, email, password, userInfo, fullName, image, verifyEmail, handleConfirmPasswordChange, confirmPassword } = useAuth();
-    const [matchedPassword, setMatchedPassword] = useState(true);
+    const { handleFirstNameChange, handleLastNameChange, handleImageChange, handleEmailChange, handlePasswordChange, registerNewUser, firstName, lastName, email, password, userInfo, fullName, image, verifyEmail, } = useAuth();
 
     const handleRegistration = e => {
         e.preventDefault();
-        setMatchedPassword(true);
-        if (password !== confirmPassword) {
-            setMatchedPassword(false)
-            return;
-        }
         registerNewUser(email, password)
             .then((result) => {
                 // Signed in 
@@ -33,9 +27,6 @@ const Register = () => {
     }
     return (
         <>
-            {
-                !matchedPassword && <h2 className="text-4xl py-4 text-red-800">Password and confirm password should be match</h2>
-            }
             <div className="grid min-h-screen place-items-center">
                 <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
                     <h1 className="text-xl font-semibold">Hello there 👋, <span className="font-normal">please fill in your information to continue</span></h1>
@@ -57,7 +48,7 @@ const Register = () => {
                         <label htmlFor="password" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
                         <input onBlur={handlePasswordChange} id="password" type="password" name="password" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
                         <label htmlFor="password-confirm" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
-                        <input onBlur={handleConfirmPasswordChange} id="password-confirm" type="password" name="password-confirm" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                        <input id="password-confirm" type="password" name="password-confirm" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
                         <button type="submit" className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
                             Sign up
                         </button>

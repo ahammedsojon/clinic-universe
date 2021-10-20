@@ -1,6 +1,6 @@
 # Clinic Universe
 
-This is site live link [Create React App](https://health-care-authenticati-21857.web.app/).
+This is the website's  [Live Demo](https://health-care-authenticati-21857.web.app/).
 
 ## Clinic Universe is part of Bangladesh's public health care system and offers hospital care to any Bangledesh resident under Medicare arrangements. You can choose to be admitted as either a public or private patient within a public hospital.
 

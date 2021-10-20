@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div className="about lg:container mx-auto p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
                 <div>
                     <img className="max-w-full h-full object-cover" src="https://i.ibb.co/WFKVbp2/about.jpg" alt="" />
                 </div>

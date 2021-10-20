@@ -15,7 +15,6 @@ const useFirebase = () => {
     const [image, setImage] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
 
@@ -118,10 +117,7 @@ const useFirebase = () => {
         setPassword(e.target.value);
         console.log(e.target.value)
     }
-    const handleConfirmPasswordChange = e => {
-        setConfirmPassword(e.target.value);
-        console.log(e.target.value)
-    }
+
     return {
         user,
         isLoading,
@@ -137,12 +133,10 @@ const useFirebase = () => {
         handleImageChange,
         handleEmailChange,
         handlePasswordChange,
-        handleConfirmPasswordChange,
         firstName,
         lastName,
         email,
         password,
-        confirmPassword,
         userInfo,
         fullName,
         image,

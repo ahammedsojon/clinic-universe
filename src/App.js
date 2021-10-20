@@ -11,12 +11,17 @@ import Register from './Pages/Login/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import Appointment from './Pages/Appointment/Appointment';
+import ScrollToTop from './Pages/ScrollToTop/ScrollToTop';
+import Doctors from './Pages/Home/Doctors/Doctors';
+import Schedule from './Pages/Schedule/Schedule';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
+          <ScrollToTop></ScrollToTop>
           <Header></Header>
           <Switch>
             <Route exact path="/">
@@ -25,20 +30,23 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
+            <Route exact path="/about">
+              <About></About>
+            </Route>
+            <PrivateRoute exact path="/schedule">
+              <Schedule></Schedule>
+            </PrivateRoute>
             <PrivateRoute exact path="/:serviceCategory/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <Route exact path="/contact">
+              <Contact></Contact>
+            </Route>
             <Route exact path="/login">
               <Login></Login>
             </Route>
             <Route exact path="/register">
               <Register></Register>
-            </Route>
-            <Route exact path="/about">
-              <About></About>
-            </Route>
-            <Route exact path="/contact">
-              <Contact></Contact>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
