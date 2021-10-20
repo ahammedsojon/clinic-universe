@@ -8,7 +8,6 @@ import NotFound from '../../NotFound/NotFound';
 
 const ServiceDetails = () => {
     const { serviceCategory, serviceId } = useParams();
-    const { handleAppointment } = useAuth();
     const [doctors, setDoctors] = useDoctors();
     const matchedDoctor = doctors.find(service => service.id === +serviceId);
     const [services, setServices] = useServices();
@@ -53,8 +52,7 @@ const ServiceDetails = () => {
                                 </div>
                             </div>
                             <div className="text-center">
-                                <Link to="/schedule">
-                                    <button onClick={() => handleAppointment(matchedDoctor)} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Appointment</button></Link>
+                                <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Appointment</button>
                             </div>
                         </div>
                     </div >

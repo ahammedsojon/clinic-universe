@@ -19,7 +19,7 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="lg:flex justify-between flex md:block">
                     <div className="md:flex lg:space-x-7">
-                        <div className="md:w-2/6">
+                        <div className="md:w-2/6 mr-4">
                             {/* Website Logo  */}
                             <NavLink to="/home" className="flex items-center py-4 px-2">
                                 <img src='https://i.ibb.co/PCkzndt/logo.png' alt="Logo" className="h-10 w-10 mr-2" />
@@ -32,7 +32,6 @@ const Header = () => {
                             <NavLink as={Link} to="/about" activeStyle={activeStyle} className="py-2 px-2 text-gray-200 font-md  hover:text-red-800 transition duration-300">About</NavLink>
                             <HashLink to="/home#services" className="py-2 px-2 text-gray-200 font-md  hover:text-red-800 transition duration-300">Services</HashLink>
                             <HashLink to="/home#doctors" className="py-2 px-2 text-gray-200 font-md  hover:text-red-800 transition duration-300">Doctors</HashLink>
-                            <NavLink to="/schedule" activeStyle={activeStyle} className="py-2 px-2 text-gray-200 font-md  hover:text-red-800 transition duration-300">Schedule</NavLink>
                             <NavLink to="/contact" activeStyle={activeStyle} className="py-2 px-2 text-gray-200 font-md  hover:text-red-800 transition duration-300">Contact Us</NavLink>
                         </div>
                     </div>
@@ -80,7 +79,6 @@ const Header = () => {
                         <li><NavLink to="/about" className="block text-sm px-2 py-4 hover:bg-red-800 transition duration-300">About</NavLink></li>
                         <li><HashLink to="/home#services" className="block text-sm px-2 py-4 hover:bg-red-800 transition duration-300">Services</HashLink></li>
                         <li><Link to="/home#doctors" className="block text-sm px-2 py-4 hover:bg-red-800 transition duration-300">Docotrs</Link></li>
-                        <li><NavLink to="/schedule" className="block text-sm px-2 py-4 hover:bg-red-800 transition duration-300">Schedule</NavLink></li>
                         <li><NavLink to="/contact" className="block text-sm px-2 py-4 hover:bg-red-800 transition duration-300">Contact Us</NavLink></li>
 
                         {

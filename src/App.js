@@ -12,7 +12,6 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import ScrollToTop from './Pages/ScrollToTop/ScrollToTop';
-import Schedule from './Pages/Schedule/Schedule';
 
 function App() {
   return (
@@ -31,9 +30,6 @@ function App() {
             <Route exact path="/about">
               <About></About>
             </Route>
-            <PrivateRoute exact path="/schedule">
-              <Schedule></Schedule>
-            </PrivateRoute>
             <PrivateRoute exact path="/:serviceCategory/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>

@@ -7,12 +7,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     const allContext = useFirebase();
     const [appointments, setAppointments] = useState([]);
-    const handleAppointment = doctor => {
-        const newAppointment = [...appointments, doctor];
-        setAppointments(newAppointment);
-    }
-    allContext.handleAppointment = handleAppointment;
-    allContext.appointments = appointments;
+    console.log(allContext)
     return (
         <AuthContext.Provider value={allContext}>
             {children}
